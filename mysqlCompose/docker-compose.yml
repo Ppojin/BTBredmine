@@ -9,10 +9,10 @@ services:
     command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8mb4 --explicit_defaults_for_timestamp
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: yaksh
-      MYSQL_USER: admin
-      MYSQL_PASSWORD: 12345
+      MYSQL_ROOT_PASSWORD: my_password
+      MYSQL_DATABASE: redmine
+      MYSQL_USER: redmine
+      MYSQL_PASSWORD: my_password
     volumes:
     - "./mysql_data:/var/lib/mysql"
     - "./mysql_dump:/docker-entrypoint-initdb.d"
